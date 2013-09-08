@@ -11,8 +11,8 @@ readmaptile = function(map_info) {
   )
   ur <- XY2LatLon(
     list(lat = map_info$center[2], lon = map_info$center[1], zoom = map_info$zoom),
-    size[1]/2 + 0.5,
-    size[2]/2 - 0.5
+    map_info$size[1]/2 + 0.5,
+    map_info$size[2]/2 - 0.5
   )  
   bbox = data.frame(
     ll.lat = ll[1], ll.lon = ll[2],
