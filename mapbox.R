@@ -1,9 +1,8 @@
 
-url = "http://api.tiles.mapbox.com/v3/examples.map-vyofok3q/pin-m-monument+48C(-77.04,38.89)/-77.04,38.89,13/400x300.png"
-destfile = "test.png"
-ret <- download.file(url, destfile, mode="wb", quiet = FALSE);
-
-getmap = function(latlng=c(),mapbox='',size=c(640,480),filename='map.png') {
-  url = paste("http://api.tiles.mapbox.com/v3/",map/latlng[1],',',latlng[2],'/',size[1],'x',size[2],'.png')
-  ret <- download.file(url, filename, mode="wb", quiet = FALSE);  
+getmap = function(center=c(),mapbox='',zoom=13,size=c(640,480),filename='map.png',marker=c()) {
+  url = paste("http://api.tiles.mapbox.com/v3/",mapbox,'/',center[1],',',center[2],',',zoom,'/',size[1],'x',size[2],'.png',sep="")
+  ret = download.file(url, filename, mode="wb", quiet = FALSE);
+  map_meta = list(file=ret, filename=filename,center=center,zoom=zoom,size=size);
+  
+  return(map_meta);
 }
