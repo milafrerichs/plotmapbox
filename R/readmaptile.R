@@ -1,3 +1,9 @@
+#' Read the PNG and convert to raster ggmap
+#' 
+#' @param map_info a list of meta information (filename,center,zoom,size)
+#' @return ggmap class raster_map
+#' @seealso \code{\link{ggmap}}
+
 readmaptile = function(map_info) {
   map = try(readPNG(map_info$filename), silent = T)
   

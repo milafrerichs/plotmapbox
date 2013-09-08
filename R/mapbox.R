@@ -21,5 +21,5 @@
 #' getmap(c(-77.04, 38.89),mapbox="examples.map-vyofok3q",markers=markers)
 #' }
 mapbox = function(center=c(-77.04,38.89),mapbox='examples.map-vyofok3q',...) {
-  map_mapbox(getmapbox_map(center,mapbox,...),...)
+  map_png(getmapbox_map(center,mapbox,...),...)
 }
