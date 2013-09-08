@@ -1,0 +1,11 @@
+Package: plotmapbox
+Type: Package
+Title: Plotting Mapbox Maps with ggmap
+Version: 1.0
+Date: 2013-08-10
+Author: Mila Frerichs
+Maintainer: <mila.frerichs@gmail.com>
+Description: Plotting Mapbox Maps with the Mapbox Static API and ggmap
+License: GPL
+Depends: methods,ggmap,png,RgoogleMaps
+#VignetteBuilder: knitr
